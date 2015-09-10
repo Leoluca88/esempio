@@ -1,7 +1,12 @@
 {
-  "name": "tabris-getting-started",
-  "description": "Tabris.js - Hello, World!",
+  "name": "Prova",
+  "description": "App di prova",
   "main": "hello.js",
+   "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eclipsesource/tabris-js.git"
+  },
   "dependencies": {
     "tabris": "1.1.0"
   }

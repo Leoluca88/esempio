@@ -1,20 +1,24 @@
-var page = tabris.create("Page", {
-  title: "Hello, World!",
-  topLevel: true
-});
+createPage("Ciao Domenico").open();
+createPage("Ciao Massimo");
 
-var button = tabris.create("Button", {
-  text: "Native Widgets",
-  layoutData: {centerX: 0, top: 100}
-}).appendTo(page);
+var drawer = tabris.create("Drawer");
 
-var label = tabris.create("TextView", {
-  font: "24px",
-  layoutData: {centerX: 0, top: [button, 50]}
-}).appendTo(page);
+tabris.create("ImageView", {
+  image: "img/napoli.jpg",
+  scaleMode: "fill",
+  layoutData: {left: 0, right: 0, top: 0, height: 200}
+}).appendTo(drawer);
 
-button.on("select", function() {
-  label.set("text", "Totally Rock!");
-});
+tabris.create("PageSelector", {
+  layoutData: {left: 0, top: 200, right: 0, bottom: 0}
+}).appendTo(drawer);
 
-page.open();
+function createPage(title) {
+  var page = tabris.create("Page", {
+    title: title,
+    image: "img/users.png",
+    topLevel: true
+  });
+  return page;
+}
+
